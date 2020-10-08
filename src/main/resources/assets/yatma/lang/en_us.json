@@ -1,0 +1,8 @@
+{
+  "item.yatma.testitem": "Test Item",
+  "block.yatma.testblock": "Test Block",
+
+  "itemGroup.yatma": "YATMA",
+
+  "message.testblock": "A test tooltip!"
+}
