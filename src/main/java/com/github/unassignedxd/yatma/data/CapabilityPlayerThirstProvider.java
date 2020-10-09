@@ -22,10 +22,6 @@ public class CapabilityPlayerThirstProvider implements ICapabilitySerializable<C
         this.thirstOptional = LazyOptional.of(()->thirst);
     }
 
-    public void invalidate(){
-        thirstOptional.invalidate();
-    }
-
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {

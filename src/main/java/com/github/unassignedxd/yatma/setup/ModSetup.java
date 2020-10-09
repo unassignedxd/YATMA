@@ -1,6 +1,7 @@
 package com.github.unassignedxd.yatma.setup;
 
 import com.github.unassignedxd.yatma.data.CapabilityPlayerThirst;
+import com.github.unassignedxd.yatma.network.ModNetwork;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -16,6 +17,7 @@ public class ModSetup {
     };
 
     public static void init(final FMLCommonSetupEvent event) {
+        ModNetwork.registerMessages();
         CapabilityPlayerThirst.register();
     }
 }

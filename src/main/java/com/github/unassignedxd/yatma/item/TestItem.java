@@ -26,7 +26,8 @@ public class TestItem extends Item {
         if(!world.isRemote) {
            if(player != null) {
                player.getCapability(CapabilityPlayerThirst.PLAYER_THIRST_CAPABILITY, null).ifPresent(h -> {
-                   player.sendMessage(new StringTextComponent("current thirst: " + h.getThirst()), new UUID(2,2));
+                   player.sendMessage(new StringTextComponent("current thirst: " + h.getThirst()));
+                   if(player.isSneaking()) h.removeThirst(2);
                });
            }
         }

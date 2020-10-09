@@ -25,15 +25,15 @@ public class CapabilityPlayerThirst {
         @Override
         public INBT writeNBT(Capability<IPlayerThirst> capability, IPlayerThirst instance, Direction side) {
             CompoundNBT tag = new CompoundNBT();
-            tag.putInt("thirstlevel", instance.getThirst());
-            tag.putInt("maxthirstlevel", instance.getMaxThirst());
+            tag.putFloat("thirstlevel", instance.getThirst());
+            tag.putFloat("maxthirstlevel", instance.getMaxThirst());
             return tag;
         }
 
         @Override
         public void readNBT(Capability<IPlayerThirst> capability, IPlayerThirst instance, Direction side, INBT nbt) {
-            instance.setThirst(((CompoundNBT)nbt).getInt("thirstlevel"));
-            instance.setMaxThirst(((CompoundNBT)nbt).getInt("maxthirstlevel"));
+            instance.setThirst(((CompoundNBT)nbt).getFloat("thirstlevel"));
+            instance.setMaxThirst(((CompoundNBT)nbt).getFloat("maxthirstlevel"));
         }
     }
 }
